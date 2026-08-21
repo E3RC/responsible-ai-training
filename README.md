@@ -9,10 +9,25 @@ A public, open-source training program for E3 Robotics Center and FIRST Robotics
 - Connect responsible AI use to FIRST Core Values and Gracious Professionalism.
 - Use realistic scenarios from FRC, academics, social media, and personal life.
 - Require a final assessment and issue a verifiable completion certificate.
+- Save course progress automatically so students can complete the program over multiple sessions.
 
-## Status
+## Current build
 
-Initial curriculum and training-site foundation in progress.
+The current draft includes:
+
+- 10 curriculum modules targeting roughly 2–2.5 hours;
+- scenario-based module checks and a randomized final;
+- pre/post learning measurement;
+- automatic same-device browser progress saving;
+- optional anonymous cross-device resume codes backed by Cloudflare D1;
+- downloadable certificate generation, QR verification, and optional email delivery;
+- current-source register reviewed August 21, 2026.
+
+## Progress saving
+
+Same-device progress is saved automatically in the browser after completed milestones. When the optional E3RC Cloudflare/D1 service is deployed, students also receive a private resume code that restores their progress on another device without requiring an account, name, or email address.
+
+See [`docs/progress-saving.md`](docs/progress-saving.md).
 
 ## Intended audience
 

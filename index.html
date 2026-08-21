@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E3RC Responsible AI Training</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="certificate.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">E3 Robotics Center • FRC Team 1555</p>
+      <h1>E3RC Responsible Artificial Intelligence Certification</h1>
+      <p class="lede">Responsible AI Use • Engineering • Academic Integrity • Digital Citizenship</p>
+      <div class="actions">
+        <button id="startButton" type="button">Start / Continue Training</button>
+        <a href="docs/current-sources-2026.md">2026 source register</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="measurementPanel" class="lesson-panel hidden" aria-live="polite">
+      <p class="eyebrow dark">Learning measurement</p>
+      <h2 id="measurementTitle"></h2>
+      <p id="measurementIntro"></p>
+      <div id="measurementContent"></div>
+    </section>
+
+    <section id="overviewSection">
+      <div class="progress-panel">
+        <div>
+          <p class="eyebrow dark">Your progress</p>
+          <h2 id="progressTitle">0 of 10 modules complete</h2>
+        </div>
+        <div class="progress-track" aria-label="Course progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressDetail" class="muted">Progress is saved automatically.</p>
+      </div>
+    </section>
+
+    <section id="resumePanel" class="resume-panel">
+      <div>
+        <p class="eyebrow dark">Save & resume</p>
+        <h2>Stop anytime and continue later</h2>
+        <p id="syncStatus" class="muted">Progress is saved automatically on this device.</p>
+      </div>
+      <div id="resumeCodeRow" class="resume-code-row hidden">
+        <span>Your private resume code</span>
+        <code id="resumeCodeValue"></code>
+        <button id="copyResumeCode" type="button" class="secondary">Copy code</button>
+      </div>
+      <div class="resume-actions">
+        <button id="createResumeCode" type="button">Create / Show Resume Code</button>
+        <form id="resumeForm" class="resume-form">
+          <label for="resumeCodeInput"><strong>Continue on this device with a saved code</strong></label>
+          <div class="resume-input-row">
+            <input id="resumeCodeInput" type="text" inputmode="text" autocomplete="off" placeholder="ABCD-EF01-2345-6789-ABCD" maxlength="24" />
+            <button type="submit" class="secondary">Resume</button>
+          </div>
+        </form>
+      </div>
+      <p class="muted small">Keep the resume code private. Anyone with the code can open the associated course progress. No student name or email is required to save progress.</p>
+    </section>
+
+    <section>
+      <h2>The Responsible AI Five</h2>
+      <div id="rules" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Course modules</h2>
+      <p>Work through the lessons in order. Each module has a short knowledge check. The final assessment draws 20 questions at random and requires 80% to pass.</p>
+      <ol id="modules" class="modules"></ol>
+    </section>
+
+    <section id="lessonPanel" class="lesson-panel hidden" aria-live="polite">
+      <div class="lesson-toolbar">
+        <button id="backToModules" class="secondary" type="button">← Modules</button>
+        <span id="lessonMeta" class="muted"></span>
+      </div>
+      <article id="lessonContent" class="lesson-content"></article>
+      <section id="knowledgeCheck" class="knowledge-check"></section>
+    </section>
+
+    <section id="finalPanel" class="lesson-panel hidden" aria-live="polite">
+      <div class="lesson-toolbar">
+        <button id="backFromFinal" class="secondary" type="button">← Modules</button>
+        <span class="muted">20 questions • 80% required</span>
+      </div>
+      <div id="finalContent"></div>
+    </section>
+
+    <section id="certificatePanel" class="lesson-panel hidden" aria-live="polite">
+      <p class="eyebrow dark">Credential earned</p>
+      <h2>Your E3RC Responsible AI Certificate</h2>
+      <p id="certificateStatus" class="muted">Enter your name exactly as you want it printed.</p>
+      <form id="certificateForm" class="certificate-form">
+        <label for="studentName"><strong>Student name</strong></label>
+        <input id="studentName" name="studentName" type="text" autocomplete="name" maxlength="100" required />
+        <button type="submit">Create Certificate</button>
+      </form>
+      <div id="certificatePreview"></div>
+      <div id="certificateActions" class="certificate-actions hidden">
+        <button id="downloadPdf" type="button">Download PDF</button>
+        <button id="downloadSvg" type="button" class="secondary">Download SVG</button>
+        <button id="printCertificate" type="button" class="secondary">Print / Save as PDF</button>
+        <button id="copyVerifyLink" type="button" class="secondary">Copy Verification Link</button>
+        <button id="emailCertificate" type="button" class="secondary">Email Certificate</button>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>E3RC program notice:</strong> This course is designed for E3 Robotics Center and FRC Team 1555. It draws on FIRST culture and values, but it is not an official FIRST certification.
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Open-source training project maintained by E3 Robotics Center. Curriculum source review: August 21, 2026.</p>
+  </footer>
+
+  <script>window.E3RC_CONFIG = { apiBase: '' };</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+  <script src="progress-sync.js"></script>
+  <script src="certificate.js"></script>
+  <script src="enhancements.js"></script>
+</body>
+</html>
