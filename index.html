@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>E3RC Responsible AI Training</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="certificate.css" />
 </head>
 <body>
   <header class="hero">
@@ -20,6 +21,13 @@
   </header>
 
   <main class="wrap">
+    <section id="measurementPanel" class="lesson-panel hidden" aria-live="polite">
+      <p class="eyebrow dark">Learning measurement</p>
+      <h2 id="measurementTitle"></h2>
+      <p id="measurementIntro"></p>
+      <div id="measurementContent"></div>
+    </section>
+
     <section id="overviewSection">
       <div class="progress-panel">
         <div>
@@ -61,6 +69,25 @@
       <div id="finalContent"></div>
     </section>
 
+    <section id="certificatePanel" class="lesson-panel hidden" aria-live="polite">
+      <p class="eyebrow dark">Credential earned</p>
+      <h2>Your E3RC Responsible AI Certificate</h2>
+      <p id="certificateStatus" class="muted">Enter your name exactly as you want it printed.</p>
+      <form id="certificateForm" class="certificate-form">
+        <label for="studentName"><strong>Student name</strong></label>
+        <input id="studentName" name="studentName" type="text" autocomplete="name" maxlength="100" required />
+        <button type="submit">Create Certificate</button>
+      </form>
+      <div id="certificatePreview"></div>
+      <div id="certificateActions" class="certificate-actions hidden">
+        <button id="downloadPdf" type="button">Download PDF</button>
+        <button id="downloadSvg" type="button" class="secondary">Download SVG</button>
+        <button id="printCertificate" type="button" class="secondary">Print / Save as PDF</button>
+        <button id="copyVerifyLink" type="button" class="secondary">Copy Verification Link</button>
+        <button id="emailCertificate" type="button" class="secondary">Email Certificate</button>
+      </div>
+    </section>
+
     <section class="notice">
       <strong>E3RC program notice:</strong> This course is designed for E3 Robotics Center and FRC Team 1555. It draws on FIRST culture and values, but it is not an official FIRST certification.
     </section>
@@ -70,8 +97,13 @@
     <p>Open-source training project maintained by E3 Robotics Center. Curriculum source review: August 21, 2026.</p>
   </footer>
 
+  <script>window.E3RC_CONFIG = { apiBase: '' };</script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
+  <script src="certificate.js"></script>
+  <script src="enhancements.js"></script>
 </body>
 </html>
