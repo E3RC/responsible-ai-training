@@ -114,7 +114,7 @@ async function openModule(module) {
   document.getElementById('finalPanel').classList.add('hidden');
   const panel = document.getElementById('lessonPanel');
   panel.classList.remove('hidden');
-  document.getElementById('overviewSection').scrollIntoView({ behavior: 'smooth' });
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   document.getElementById('lessonMeta').textContent = `Module ${module.id} • ~${module.minutes} minutes`;
 
   const response = await fetch(module.contentPath);
