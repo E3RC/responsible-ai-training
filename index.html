@@ -13,13 +13,26 @@
       <h1>E3RC Responsible Artificial Intelligence Certification</h1>
       <p class="lede">Responsible AI Use • Engineering • Academic Integrity • Digital Citizenship</p>
       <div class="actions">
-        <button id="startButton">Start Training</button>
-        <a href="docs/course-spec.md">Course specification</a>
+        <button id="startButton" type="button">Start / Continue Training</button>
+        <a href="docs/current-sources-2026.md">2026 source register</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
+    <section id="overviewSection">
+      <div class="progress-panel">
+        <div>
+          <p class="eyebrow dark">Your progress</p>
+          <h2 id="progressTitle">0 of 10 modules complete</h2>
+        </div>
+        <div class="progress-track" aria-label="Course progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressDetail" class="muted">Progress is saved locally in this browser.</p>
+      </div>
+    </section>
+
     <section>
       <h2>The Responsible AI Five</h2>
       <div id="rules" class="grid"></div>
@@ -27,8 +40,25 @@
 
     <section>
       <h2>Course modules</h2>
-      <p>This first build exposes the planned course structure. Interactive lessons, progress tracking, randomized assessments, and certificate generation will be added next.</p>
+      <p>Work through the lessons in order. Each module has a short knowledge check. The final assessment draws 20 questions at random and requires 80% to pass.</p>
       <ol id="modules" class="modules"></ol>
+    </section>
+
+    <section id="lessonPanel" class="lesson-panel hidden" aria-live="polite">
+      <div class="lesson-toolbar">
+        <button id="backToModules" class="secondary" type="button">← Modules</button>
+        <span id="lessonMeta" class="muted"></span>
+      </div>
+      <article id="lessonContent" class="lesson-content"></article>
+      <section id="knowledgeCheck" class="knowledge-check"></section>
+    </section>
+
+    <section id="finalPanel" class="lesson-panel hidden" aria-live="polite">
+      <div class="lesson-toolbar">
+        <button id="backFromFinal" class="secondary" type="button">← Modules</button>
+        <span class="muted">20 questions • 80% required</span>
+      </div>
+      <div id="finalContent"></div>
     </section>
 
     <section class="notice">
@@ -37,9 +67,11 @@
   </main>
 
   <footer class="wrap footer">
-    <p>Open-source training project maintained by E3 Robotics Center.</p>
+    <p>Open-source training project maintained by E3 Robotics Center. Curriculum source review: August 21, 2026.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
