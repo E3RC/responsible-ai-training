@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "e3rc-responsible-ai-certificates",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "ALLOWED_ORIGIN": "https://e3rc.github.io",
+    "PUBLIC_VERIFY_BASE": "https://e3rc.github.io/responsible-ai-training",
+    "MAIL_FROM": "E3RC Responsible AI <certificates@e3rc.org>"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "e3rc-responsible-ai-certificates",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ]
+}
