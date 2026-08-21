@@ -37,8 +37,32 @@
         <div class="progress-track" aria-label="Course progress">
           <div id="progressBar" class="progress-bar"></div>
         </div>
-        <p id="progressDetail" class="muted">Progress is saved locally in this browser.</p>
+        <p id="progressDetail" class="muted">Progress is saved automatically.</p>
       </div>
+    </section>
+
+    <section id="resumePanel" class="resume-panel">
+      <div>
+        <p class="eyebrow dark">Save & resume</p>
+        <h2>Stop anytime and continue later</h2>
+        <p id="syncStatus" class="muted">Progress is saved automatically on this device.</p>
+      </div>
+      <div id="resumeCodeRow" class="resume-code-row hidden">
+        <span>Your private resume code</span>
+        <code id="resumeCodeValue"></code>
+        <button id="copyResumeCode" type="button" class="secondary">Copy code</button>
+      </div>
+      <div class="resume-actions">
+        <button id="createResumeCode" type="button">Create / Show Resume Code</button>
+        <form id="resumeForm" class="resume-form">
+          <label for="resumeCodeInput"><strong>Continue on this device with a saved code</strong></label>
+          <div class="resume-input-row">
+            <input id="resumeCodeInput" type="text" inputmode="text" autocomplete="off" placeholder="ABCD-EF01-2345-6789-ABCD" maxlength="24" />
+            <button type="submit" class="secondary">Resume</button>
+          </div>
+        </form>
+      </div>
+      <p class="muted small">Keep the resume code private. Anyone with the code can open the associated course progress. No student name or email is required to save progress.</p>
     </section>
 
     <section>
@@ -103,6 +127,7 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
+  <script src="progress-sync.js"></script>
   <script src="certificate.js"></script>
   <script src="enhancements.js"></script>
 </body>
