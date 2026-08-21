@@ -1,6 +1,6 @@
-# Module 5 — Teamwork, Credit, and Authorship
+# Module 5 — Teamwork, Credit, Authorship, and Copyright
 
-**Estimated time:** 12–15 minutes  
+**Estimated time:** 14–17 minutes  
 **E3RC principles:** DISCLOSE, RESPECT, OWN IT  
 **FIRST connection:** Teamwork, Inclusion, Gracious Professionalism®
 
@@ -11,6 +11,7 @@ Students should be able to:
 - distinguish assistance from authorship;
 - give appropriate credit for human and AI contributions;
 - avoid inventing or exaggerating team accomplishments;
+- explain the difference between attribution, permission, licensing, and copyright;
 - use AI in award submissions and team communications without losing team ownership.
 
 ## AI can help a team communicate — but it cannot create accomplishments that never happened
@@ -58,6 +59,33 @@ A more accurate description is often:
 
 Good disclosure is about accuracy, not embarrassment.
 
+## Copyright is not the same as attribution
+
+Students often hear “give credit” and assume that credit automatically makes copying okay. It does not.
+
+These ideas are different:
+
+- **Attribution** means saying who created something.
+- **Permission** means the creator or rights holder allowed a use.
+- **A license** states what uses are allowed and under what conditions.
+- **Copyright** is a legal protection that can apply to original human-created expression.
+
+A person can give perfect attribution and still use copyrighted material in a way that is not permitted. Conversely, some licenses allow broad reuse if their conditions are followed.
+
+## AI and human authorship
+
+The U.S. Copyright Office’s current AI guidance continues to center **human authorship**. Using AI as an assistive tool does not automatically eliminate copyright in the human-created portions of a work. But purely AI-generated expressive output may not receive the same copyright protection because copyright law requires human authorship.
+
+For Team 1555 students, the practical lesson is:
+
+- keep meaningful human creative control over important work;
+- do not assume an AI output is automatically “free to use however I want”;
+- respect source licenses and creator rights;
+- document important source material and permissions;
+- check current rules when legal ownership actually matters.
+
+This course is not legal advice; it teaches safe habits.
+
 ## Respect the work of other people
 
 AI does not erase the need to respect creators. Students should not:
@@ -65,7 +93,8 @@ AI does not erase the need to respect creators. Students should not:
 - remove someone’s name and present their work as their own;
 - use AI to imitate a teammate, teacher, sponsor, artist, or public figure deceptively;
 - upload private work to an external system without permission;
-- ask AI to rewrite copied material merely to hide plagiarism.
+- ask AI to rewrite copied material merely to hide plagiarism;
+- assume that an image found online or generated from a named artist’s work is automatically unrestricted.
 
 ## FIRST connection
 
@@ -73,9 +102,10 @@ FIRST describes Gracious Professionalism as high-quality work that values others
 
 ## Key takeaway
 
-> **AI can polish the story. The story still has to be yours — and true.**
+> **AI can polish the story. The story still has to be yours — and true. Respecting creators means more than just naming them.**
 
 ### Current sources
 
 - FIRST mission, Core Values, Gracious Professionalism and Coopertition: https://www.firstinspires.org/about
 - FIRST FRC Team Awards: https://www.firstinspires.org/resources/library/frc/team-awards
+- U.S. Copyright Office — Copyright and Artificial Intelligence: https://www.copyright.gov/ai/
