@@ -1,0 +1,30 @@
+{
+  "courseId": "e3rc-responsible-ai",
+  "version": "2026.1-draft",
+  "title": "E3RC Responsible Artificial Intelligence Certification",
+  "subtitle": "FIRST Robotics Competition — Team 1555",
+  "organization": "E3 Robotics Center",
+  "team": "1555",
+  "targetMinutes": 135,
+  "passingScore": 80,
+  "finalQuestionCount": 20,
+  "rules": [
+    {"key":"verify","label":"VERIFY","description":"AI output is not automatically true."},
+    {"key":"protect","label":"PROTECT","description":"Protect private, sensitive, confidential, and credential information."},
+    {"key":"disclose","label":"DISCLOSE","description":"Be honest about meaningful AI assistance when appropriate."},
+    {"key":"respect","label":"RESPECT","description":"Do not use AI to deceive, bully, impersonate, exploit, or harm others."},
+    {"key":"own-it","label":"OWN IT","description":"You remain responsible for what you submit, publish, build, or deploy."}
+  ],
+  "modules": [
+    {"id":"01","slug":"ai-is-a-tool","title":"AI Is a Tool, Not an Authority","minutes":12},
+    {"id":"02","slug":"verify-before-you-trust","title":"Verify Before You Trust","minutes":15},
+    {"id":"03","slug":"schoolwork","title":"AI and Schoolwork","minutes":15},
+    {"id":"04","slug":"robotics-engineering","title":"AI in Engineering and Robotics","minutes":20},
+    {"id":"05","slug":"teamwork-credit","title":"Teamwork, Credit, and Authorship","minutes":12},
+    {"id":"06","slug":"bias-inclusion","title":"Bias, Fairness, and Inclusion","minutes":12},
+    {"id":"07","slug":"privacy-security","title":"Privacy, Security, and Confidential Information","minutes":15},
+    {"id":"08","slug":"deepfakes-personal-life","title":"Deepfakes, Misinformation, and Personal Life","minutes":15},
+    {"id":"09","slug":"coopertition","title":"Competition, Coopertition, and Community Responsibility","minutes":9},
+    {"id":"10","slug":"commitment-final","title":"Responsible AI Commitment and Final Assessment","minutes":10}
+  ]
+}
