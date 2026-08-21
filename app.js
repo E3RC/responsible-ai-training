@@ -16,6 +16,7 @@ function saveProgress() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   renderProgress();
   renderModules(courseData.modules);
+  void window.E3RCProgressSync?.save(progress);
 }
 
 async function loadJson(path) {
@@ -51,7 +52,7 @@ function renderProgress() {
   document.getElementById('progressBar').style.width = `${percent}%`;
   const finalText = progress.final?.passed
     ? ` Final passed: ${progress.final.score}%.`
-    : ' Progress is saved locally in this browser.';
+    : ' Progress is saved automatically.';
   document.getElementById('progressDetail').textContent = `${percent}% complete.${finalText}`;
 }
 
@@ -237,7 +238,7 @@ function startFinal() {
     saveProgress();
 
     if (passed) {
-      result.innerHTML = `<div class="success"><h3>Passed — ${score}%</h3><p>You have met the assessment requirement for the E3RC Responsible Artificial Intelligence Certification.</p><p><strong>Certificate generation and QR verification are the next feature being added to this site.</strong></p></div>`;
+      result.innerHTML = `<div class="success"><h3>Passed — ${score}%</h3><p>You have met the assessment requirement for the E3RC Responsible Artificial Intelligence Certification.</p><p>Complete the post-course check to unlock your certificate.</p></div>`;
     } else {
       const moduleNames = [...missedModules]
         .map(id => courseData.modules.find(m => m.id === id)?.title)
