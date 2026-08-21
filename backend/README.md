@@ -1,12 +1,25 @@
-# Certificate verification backend
+# E3RC Certificate and Progress API
 
-This optional Cloudflare Worker turns locally generated course certificates into centrally verifiable E3RC credentials and enables email delivery.
+This optional Cloudflare Worker adds two durable services to the otherwise static GitHub Pages course:
 
-The training site itself remains static and can run on GitHub Pages without this service. When the backend is not configured, students can still complete the course and download/print a certificate, but the verification page will label it as local-only.
+1. anonymous cross-device course progress backup/resume codes;
+2. centrally verifiable E3RC certificate records with optional email delivery.
+
+The training site itself remains static and can run on GitHub Pages without this service. Without the backend, same-device progress still saves automatically in the browser and students can still complete the course and download/print a local certificate.
 
 ## What the Worker stores
 
-Only the minimum certificate record:
+### Anonymous course progress
+
+- private random 20-character resume code
+- course progress JSON
+- curriculum version
+- created timestamp
+- updated timestamp
+
+No name, email, student ID, or date of birth is required to save course progress.
+
+### Certificates
 
 - certificate ID
 - student name
@@ -25,7 +38,7 @@ The Worker follows current Cloudflare guidance reviewed August 21, 2026:
 - `nodejs_compat`
 - D1 binding instead of Cloudflare REST calls
 - prepared statements with bound parameters
-- Web Crypto for credential IDs
+- Web Crypto for credential and resume-code generation
 - no secrets committed to source
 - observability enabled
 
@@ -79,7 +92,23 @@ For production, update these Worker variables in `wrangler.jsonc` as needed:
 - `PUBLIC_VERIFY_BASE` — public base URL of the training site.
 - `MAIL_FROM` — verified sender identity used by the email provider.
 
-## Endpoints
+## Progress endpoints
+
+### `POST /progress`
+
+Creates a new anonymous progress record and returns a private resume code.
+
+### `GET /progress/:code`
+
+Retrieves the saved course state for that resume code.
+
+### `PUT /progress/:code`
+
+Updates the saved course state after a completed milestone.
+
+The resume code acts as a bearer credential, so students should keep it private.
+
+## Certificate endpoints
 
 ### `POST /certificates`
 
